@@ -1,0 +1,9 @@
+export { default as ArrowRight } from './IconArrayRight.vue';
+export { default as ArrowUpRight } from './IconArrowUpRight.vue';
+export { default as CodePen } from './IconCodePen.vue';
+export { default as GitHub } from './IconGitHub.vue';
+export { default as Linkedin } from './IconLinkedin.vue';
+export { default as Mail } from './IconMail.vue';
+export { default as Website } from './IconWebsite.vue';
+export { default as YouTube } from './IconYouTube.vue';
+

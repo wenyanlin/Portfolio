@@ -1,0 +1,156 @@
+@import './base.css';
+
+h1 {
+  @apply text-8xl text-neutral;
+}
+
+.badge {
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  color: var(--primary-content);
+  border-radius: 9999px;
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
+  line-height: 2;
+
+  --btn-text-color: var(--primary-content);
+  --btn-color: var(--primary);
+
+  & {
+    --text-opacity: 1;
+    --bg-opacity: 0.5;
+    --border-opacity: 1;
+    color: oklch(var(--btn-text-color, var(--fallback-p)) / var(--text-opacity, 1));
+    background-color: oklch(var(--btn-color, var(--fallback-p)) / var(--bg-opacity, 0.5));
+    border-color: oklch(var(--btn-color, var(--fallback-p)) / var(--border-opacity, 1));
+  }
+
+  @supports not (color: oklch(0% 0 0)) {
+    background-color: var(--btn-color), var(--fallback-p);
+    border-color: var(--btn-color), var(--fallback-p);
+  }
+
+  /* @media (hover: hover) {
+    &:hover {
+      @supports (color: color-mix(in oklch, black, black)) {
+        background-color: color-mix(
+          in oklch,
+          oklch(var(--btn-color, var(--fallback-p)) / var(--bg-opacity, 1)) 90%,
+          black
+        );
+        border-color: color-mimx(
+          in oklch,
+          oklch(var(--btn-color, var(--fallback-p)) / var(--border-opacity,)) 90%,
+          black
+        );
+      }
+
+      @supports not (color: color-mix(in oklch, black, black)) {
+        background-color: var(--btn-color, var(--fallback-p));
+        border-color: var(--btn-color, var(--fallback-p));
+      }
+    }
+  } */
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.article h2.title{
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 2;
+  margin-bottom: 0.5rem;
+}
+
+.article p{
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.article img{
+  border: oklch(var(--neutral-content)) 1px solid;
+}
+
+.article .link a{
+  display: flex;
+  gap:.25rem;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: .25rem;
+  color: oklch(var(--neutral)/.6);
+  background-color: oklch(var(--base-100)/.8);
+  border: oklch(var(--neutral-content)) 1px solid;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  will-change: background, color;
+}
+
+.article .link a:hover{
+  background-color: oklch(var(--neutral-content)/.8);
+  color: oklch(var(--neutral)/.8);
+}
+
+.article .link a:active{
+  background-color: oklch(var(--neutral-content));
+  color: oklch(var(--neutral)/1);
+}
+
+.article .link a.link__main{
+  display: flex;
+  gap:.25rem;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: .25rem;
+  background-color: oklch(var(--neutral));
+  color: oklch(var(--neutral-content));
+  border: oklch(var(--neutral)) 1px solid;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  will-change: background, color;
+}
+
+.article .link a:hover.link__main{
+  background-color: oklch(var(--neutral)/0.6);
+  color: oklch(var(--base-100));
+}
+
+.article .link a:active.link__main{
+  background-color: oklch(var(--neutral)/0.8);
+  color: oklch(var(--neutral-content));
+}
+
+.article .link a.link__main svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.article ul{
+  list-style: none;
+  margin-left: 1.6rem;
+}
+
+.article ul li {
+  position: relative;
+  line-height: 2;
+}
+
+.article ul li::before {
+  content: "•";
+  color: oklch(var(--neutral));
+  position: absolute;
+  left: -1.4rem;
+}
+
+@media (max-width: 640px) {
+  .article .process-block+span{
+    transform: rotate(90deg);
+  }
+}
