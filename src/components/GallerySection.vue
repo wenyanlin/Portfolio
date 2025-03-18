@@ -1,9 +1,9 @@
 <template>
   <div class="gallery-section rounded relative h-fit sm:h-auto overflow-hidden">
-    <div class="h-full">
-      <img :src="props.project.image" class="w-full h-full object-cover object-center" alt="">
+    <div class="h-full" data-aos="zoom-in-up">
+      <img :src="props.project.image" class="w-full h-full object-cover object-center" :alt="props.project.title">
     </div>
-    <div class="gallery-section__information sm:absolute sm:left-0 sm:-bottom-16 sm:h-16 inset-x-0 sm:px-4 py-2 flex flex-col justify-center gap-4">
+    <div class="gallery-section__information sm:absolute sm:left-0 sm:-bottom-16 sm:h-16 inset-x-0 sm:px-4 py-2 flex flex-col justify-center gap-4" data-aos="zoom-in-up">
       <div class="gallery-section__information__title text-sm sm:text-base text-neutral tracking-widest w-fit">{{ props.project.title }}</div>
     </div>
   </div>

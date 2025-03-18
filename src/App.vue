@@ -1,8 +1,6 @@
 <template>
-  <!-- <LoadingSection></LoadingSection> -->
   <div class="flex justify-center items-center">
     <div class="relative max-w-[var(--space-xl)] flex flex-col justify-between mx-4 md:mx-16 lg:mx-8 2xl:mx-0">
-      <!-- <ScreenCursor /> -->
       <div class="shape fixed top-0 left-0 w-full h-screen scale-100 -z-40">
       </div>
       <div class="grid grid-cols-1 min-h-screen relative lg:grid-cols-5">
@@ -14,7 +12,6 @@
 </template>
 
 <script setup>
-// import LoadingSection from '@/components/LoadingSection.vue';
 import SiteHeader from '@/components/SiteHeader.vue';
 import { provide, ref } from 'vue';
 import { RouterView } from 'vue-router';

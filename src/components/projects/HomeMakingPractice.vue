@@ -11,7 +11,7 @@
       </a>
     </section>
     <section>
-      <img src="/projects/HomeMakingPractice.gif" alt="">
+      <img src="/projects/HomeMakingPractice.gif" alt="家裡蹲練習預覽圖">
     </section>
     <section class="background">
       <p>

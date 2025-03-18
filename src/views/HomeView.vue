@@ -5,7 +5,7 @@
   </Teleport>
   <main class="pt-24 col-span-1 lg:col-span-3">
     <section class="about mb-32" id="about">
-      <div class="about__inner text-lg text-neutral tracking-wider leading-loose break-words space-y-4">
+      <div class="about__inner text-lg text-neutral tracking-wider leading-loose break-words space-y-4" data-aos="fade-up">
         <p>
           我目前是一名專注於前端開發的工程師，擅長將設計理念轉化為流暢的使用者體驗。在開發過程中，我特別注重介面的直觀性與可訪問性，讓每位使用者都能輕鬆找到產品。將靜態設計轉化為生動的網頁介面是我最著迷的過程，這種創造的過程常常讓我進入忘我的心流狀態。
         </p>
@@ -17,33 +17,41 @@
     </section>
     <section class="exp mb-32" id="experience">
       <h2 class="text-2xl font-semibold tracking-widest">EXPERIENCE</h2>
-      <div class="exp__inner flex flex-col gap-16 mt-16">
-        <Experience v-for="exp in experienceData" :key="exp.period" :experience="exp" />
+      <div class="exp__inner flex flex-col gap-16 mt-16 overflow-x-hidden">
+        <Experience v-for="exp in experienceData" :key="exp.period" :experience="exp"  data-aos="fade-left"/>
       </div>
     </section>
     <section class="projects mb-32" id="projects">
       <h2 class="text-2xl font-semibold tracking-widest">PROJECTS</h2>
       <div class="projects__inner grid sm:grid-cols-2 gap-x-8 gap-y-16 mt-16">
         <Project v-for="project in projectData" :key="project.title" :project="project"
-          @click="openModal($event, project);" />
+          @click="openModal($event, project);"/>
       </div>
     </section>
     <section class="gallery mb-32" id="gallery">
       <h2 class="text-2xl font-semibold tracking-widest">GALLERY</h2>
       <!-- <div class="gallery__inner grid sm:grid-cols-2 gap-8 mt-16"> -->
-      <div class="gallery__inner mt-16 flex flex-wrap gap-x-2 gap-y-4 sm:gap-x-8 sm:gap-y-16 justify-center align-stretch">
-        <Gallery v-for="project in galleryData" :key="project.title" :project="project" :class="project.width" />
+      <div
+        class="gallery__inner mt-16 flex flex-wrap gap-x-2 gap-y-4 sm:gap-x-8 sm:gap-y-16 justify-center align-stretch">
+        <Gallery v-for="project in galleryData" :key="project.title" :project="project" :class="project.width"/>
       </div>
     </section>
-    <section class="about mb-32 lg:h-[calc(100vh-14rem)]" id="in-closing,">
-      <h2 class="text-2xl font-semibold tracking-widest">最後，</h2>
-      <div class="about__inner text-lg text-neutral tracking-wider leading-loose break-words space-y-4 mt-16 relative">
-        <p>
-          不只前端開發，過去我熱衷於探索不同領域，並試圖從中找到我願意終其一生為之付出的領域。很長一段時間，我嘗試了寫小說、平面設計、動態設計、動畫製作、遊戲製作、社群經營等舉不勝舉。我也寫了超過五種程式語言，其中不乏遇過一踏入就想離開的領域（就是你組合語言！），這些經歷卻更加開闊了我的視野，最終也意外找到了前端開發這條學無止境的道路。
-        </p>
-        <p>我想我已經找到了我的熱愛，並將在這個領域中不斷茁壯。特別是在用戶體驗設計和互動性開發方面，我找到了極大的成就感。我期待著未來的挑戰，並相信自己能夠跨越一座又一座的高山，為這個領域做出實質貢獻。</p>
-        <p>當然，學海浩瀚，探索將永無止境。</p>
-        <img src="/avatar.gif" alt="avatar" class="w-32 float-right">
+    <section class="about mb-24 lg:h-[calc(100vh-14rem)] flex flex-col justify-between" id="in-closing,">
+      <div>
+        <h2 class="text-2xl font-semibold tracking-widest">最後，</h2>
+        <div
+          class="about__inner text-lg text-neutral tracking-wider leading-loose break-words space-y-4 mt-16 relative">
+          <p data-aos="fade-up">
+            不只前端開發，過去我熱衷於探索不同領域，並試圖從中找到我願意終其一生為之付出的領域。很長一段時間，我嘗試了寫小說、平面設計、動態設計、動畫製作、遊戲製作、社群經營等舉不勝舉。我也寫了超過五種程式語言，其中不乏遇過一踏入就想離開的領域（就是你組合語言！），這些經歷卻更加開闊了我的視野，最終也意外找到了前端開發這條學無止境的道路。
+          </p>
+          <p data-aos="fade-up">我想我已經找到了我的熱愛，並將在這個領域中不斷茁壯。特別是在用戶體驗設計和互動性開發方面，我找到了極大的成就感。我期待著未來的挑戰，並相信自己能夠跨越一座又一座的高山，為這個領域做出實質貢獻。</p>
+          <p data-aos="fade-up">當然，學海浩瀚，探索將永無止境。</p>
+          <a href="/林文姸的履歷.pdf" target="_blank" data-aos="fade-up"><img src="/avatar.gif" alt="avatar" class="w-32 float-right avatar"></a>
+        </div>
+      </div>
+      <div class="text-lg text-neutral tracking-wider leading-loose break-words mt-48 lg:mt-0">
+        <p data-aos="fade-up">如果你有任何想法，或只是想跟我聊天，歡迎聯繫我！</p>
+        <p data-aos="fade-up"><a href="mailto:clps10070623@gmail.com">clps10070623@gmail.com</a></p>
       </div>
     </section>
   </main>
@@ -315,5 +323,88 @@ section {
       }
     }
   }
+
+  .avatar {
+    cursor: pointer;
+    &:hover {
+      -webkit-animation: jello-horizontal 0.9s linear infinite;
+      animation: jello-horizontal 0.9s linear infinite;
+    }
+  }
+
+  @-webkit-keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+      transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+      transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+      transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+      transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+      transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  @keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+      transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+      transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+      transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+      transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+      transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
 }
 </style>

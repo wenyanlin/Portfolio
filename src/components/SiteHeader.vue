@@ -1,6 +1,6 @@
 <template>
   <header class="header pt-8 sm:pt-16 lg:py-24 lg:h-screen lg:sticky lg:top-0">
-    <div class="header__inner h-full flex flex-col justify-between">
+    <div class="header__inner h-full flex flex-col justify-between" data-aos="fade-right" data-aos-once="true" data-aos-mirror="false">
       <RouterLink to="#about" class="header__title flex flex-col">
         <h1 class="jersey-10">Wen Yan</h1>
         <span class="text-2xl tracking-widest font-black text-neutral">Front End Engineer</span>

@@ -7,7 +7,7 @@
       </a>
     </section>
     <section class="background">
-      <img src="/projects/Nonogram.gif" alt="" class="mb-2">
+      <img src="/projects/Nonogram.gif" alt="Nonogram文字特效" class="mb-2">
       <p>
         《Nonogram》動畫由我帶領團隊製作而成。從歷史到規則，實作到結論，希望用簡單的語言將 Nonogram 分享給更多的人。耗時一週，主要使用 After Effects 製作動畫，並以 Premiere 剪輯，其中特別使用 Cartoon Animator 來製作角色面部動畫。
       </p>
