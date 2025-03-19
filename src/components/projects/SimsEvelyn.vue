@@ -1,12 +1,15 @@
 <template>
   <div class="home-making article">
     <section class="link flex gap-2">
-      <a href="https://www.youtube.com/@SimsEvelyn" target="_blank" class="link__main"><span class="mb-0.25">YouTube
-          頻道</span>
+      <a href="https://www.youtube.com/@SimsEvelyn" target="_blank" class="link__main"
+        ><span class="mb-0.25">YouTube 頻道</span>
         <Website />
       </a>
-      <a href="https://space.bilibili.com/403261269?spm_id_from=333.1007.0.0" target="_blank" class="link__main"><span
-          class="mb-0.25">B站頻道</span>
+      <a
+        href="https://space.bilibili.com/403261269?spm_id_from=333.1007.0.0"
+        target="_blank"
+        class="link__main"
+        ><span class="mb-0.25">B站頻道</span>
         <Website />
       </a>
     </section>
@@ -38,7 +41,7 @@
       <div class="pt-2 space-y-4">
         <div class="flex gap-2 flex-col sm:flex-row" v-for="tools in toolSet" :key="tools.title">
           <div class="flex gap-2 flex-wrap">
-            <div class="badge" v-for="item in tools.list" :key="item"> {{ item }}</div>
+            <div class="badge" v-for="item in tools.list" :key="item">{{ item }}</div>
           </div>
         </div>
       </div>
@@ -46,37 +49,47 @@
     <section>
       <h2 class="title">代表作</h2>
       <div class="flex flex-col gap-2">
-        <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/wV6ICnzEvoY?si=wHJTxjfCJu-kZnF4"
-          title="YouTube video player" frameborder="0"
+        <iframe
+          class="w-full aspect-video"
+          src="https://www.youtube.com/embed/wV6ICnzEvoY?si=wHJTxjfCJu-kZnF4"
+          title="YouTube video player"
+          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/vQOTmFngzw8?si=pKHNKcGEocBwa8DT"
-          title="YouTube video player" frameborder="0"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          class="w-full aspect-video"
+          src="https://www.youtube.com/embed/vQOTmFngzw8?si=pKHNKcGEocBwa8DT"
+          title="YouTube video player"
+          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </div>
     </section>
   </div>
 </template>
 
 <script setup>
-import { ArrowRight, Website } from '@/components/icons';
+import { ArrowRight, Website } from '@/components/icons'
 const toolSet = [
   {
     title: '',
     list: ['Adobe Illustrator', 'Adobe Premiere', 'Adobe After Effects', 'OBS'],
-  }
+  },
 ]
 </script>
 
 <style lang="scss" scoped>
 .process-block {
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   background-color: oklch(var(--base-300));
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   color: oklch(var(--base-content));
 
-  @supports not(color: oklch(0 0 0)) {
+  @supports not (color: oklch(0 0 0)) {
     background-color: var(--fallback-b3);
     color: var(--fallback-bc);
   }

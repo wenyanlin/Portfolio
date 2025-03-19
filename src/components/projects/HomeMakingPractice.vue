@@ -1,17 +1,18 @@
 <template>
   <div class="home-making article">
     <section class="link flex gap-2">
-      <a href="https://wenyanlin.github.io/project/WebLayout" target="_blank" class="link__main"><span
-          class="mb-0.25">詳細介紹</span>
+      <a href="https://wenyanlin.github.io/project/WebLayout" target="_blank" class="link__main"
+        ><span class="mb-0.25">詳細介紹</span>
         <Website />
       </a>
-      <a href="https://github.com/wenyanlin/Practice-Project-Home-Making.git" target="_blank"><span class="mt-0.25">
+      <a href="https://github.com/wenyanlin/Practice-Project-Home-Making.git" target="_blank"
+        ><span class="mt-0.25">
           <GitHub />
         </span>
       </a>
     </section>
     <section>
-      <img src="/projects/HomeMakingPractice.gif" alt="家裡蹲練習預覽圖">
+      <img src="/projects/HomeMakingPractice.gif" alt="家裡蹲練習預覽圖" />
     </section>
     <section class="background">
       <p>
@@ -24,7 +25,7 @@
         <div class="flex gap-2 flex-col sm:flex-row" v-for="tools in toolSet" :key="tools.title">
           <h3 class="whitespace-nowrap">{{ tools.title }}</h3>
           <div class="flex gap-2 flex-wrap">
-            <div class="badge" v-for="item in tools.list" :key="item"> {{ item }}</div>
+            <div class="badge" v-for="item in tools.list" :key="item">{{ item }}</div>
           </div>
         </div>
       </div>
@@ -33,7 +34,7 @@
 </template>
 
 <script setup>
-import { GitHub, Website } from '@/components/icons';
+import { GitHub, Website } from '@/components/icons'
 const toolSet = [
   {
     title: '設計軟體',
@@ -42,18 +43,18 @@ const toolSet = [
   {
     title: '開發語言',
     list: ['HTML', 'SCSS', 'JavaScript', 'jQuery'],
-  }
+  },
 ]
 </script>
 
 <style lang="scss" scoped>
 .process-block {
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   background-color: oklch(var(--base-300));
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   color: oklch(var(--base-content));
 
-  @supports not(color: oklch(0 0 0)) {
+  @supports not (color: oklch(0 0 0)) {
     background-color: var(--fallback-b3);
     color: var(--fallback-bc);
   }

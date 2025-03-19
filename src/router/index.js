@@ -1,6 +1,6 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import HomeView from '../views/HomeView.vue';
-import AOS from 'aos';
+import { createRouter, createWebHistory } from 'vue-router'
+import HomeView from '../views/HomeView.vue'
+import AOS from 'aos'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,18 +10,18 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
     },
-    { path: '/:pathMatch(.*)*', redirect: '/' }
+    { path: '/:pathMatch(.*)*', redirect: '/' },
   ],
   scrollBehavior(to) {
     if (to.hash) {
       return {
         el: to.hash,
         behavior: 'smooth',
-        top: 80
+        top: 80,
       }
     }
   },
-});
+})
 
 router.afterEach(() => {
   setTimeout(() => {

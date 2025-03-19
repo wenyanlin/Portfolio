@@ -1,7 +1,8 @@
 <template>
   <div class="home-making article">
     <section class="link flex">
-      <a href="https://www.draw123.com.tw/" target="_blank" class="link__main"><span class="mb-0.25">造訪網站</span>
+      <a href="https://www.draw123.com.tw/" target="_blank" class="link__main"
+        ><span class="mb-0.25">造訪網站</span>
         <Website />
       </a>
     </section>
@@ -33,7 +34,7 @@
         <div class="flex gap-2 flex-col sm:flex-row" v-for="tools in toolSet" :key="tools.title">
           <h3 class="whitespace-nowrap">{{ tools.title }}</h3>
           <div class="flex gap-2 flex-wrap">
-            <div class="badge" v-for="item in tools.list" :key="item"> {{ item }}</div>
+            <div class="badge" v-for="item in tools.list" :key="item">{{ item }}</div>
           </div>
         </div>
       </div>
@@ -42,7 +43,7 @@
 </template>
 
 <script setup>
-import { ArrowRight, Website } from '@/components/icons';
+import { ArrowRight, Website } from '@/components/icons'
 const toolSet = [
   {
     title: '設計軟體',
@@ -51,18 +52,18 @@ const toolSet = [
   {
     title: '開發語言',
     list: ['HTML', 'SCSS', 'JavaScript', 'Vue 3', 'Vue-Router', 'Tailwind CSS'],
-  }
+  },
 ]
 </script>
 
 <style lang="scss" scoped>
 .process-block {
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   background-color: oklch(var(--base-300));
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   color: oklch(var(--base-content));
 
-  @supports not(color: oklch(0 0 0)) {
+  @supports not (color: oklch(0 0 0)) {
     background-color: var(--fallback-b3);
     color: var(--fallback-bc);
   }

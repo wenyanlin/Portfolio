@@ -1,13 +1,16 @@
 <template>
   <div class="projects-section w-full relative cursor-pointer">
     <div
-      class="projects-section__inner relative flex flex-col gap-4 sm:items-center tracking-wider leading-loose w-full aspect-[3/1]" data-aos="zoom-in-up">
+      class="projects-section__inner relative flex flex-col gap-4 sm:items-center tracking-wider leading-loose w-full aspect-[3/1]"
+      data-aos="zoom-in-up"
+    >
       <!-- <div class="w-2/3 h-full bg-neutral-content">
         <img src="/src/assets/projects/homemaking.webp" alt="">
       </div> -->
       <div
-        class="projects-section__image  rounded bg-neutral-content w-full border border-neutral-content overflow-hidden">
-        <img :src="image" :alt="title" class="w-full h-full object-cover object-top">
+        class="projects-section__image rounded bg-neutral-content w-full border border-neutral-content overflow-hidden"
+      >
+        <img :src="image" :alt="title" class="w-full h-full object-cover object-top" />
       </div>
       <div class="projects-section__content w-full">
         <div class="projects-section__title flex gap-1 items-center">
@@ -32,18 +35,17 @@
 const props = defineProps({
   project: {
     type: Object,
-    default: () => { },
-  }
-});
+    default: () => {},
+  },
+})
 
-const { title, image, description, tags } = props.project;
+const { title, image, description, tags } = props.project
 </script>
 
 <style lang="scss" scoped>
 .projects-section {
-
   &__title {
-    >svg {
+    > svg {
       width: 1.75rem;
       height: 1.75rem;
     }

@@ -1,6 +1,11 @@
 <template>
   <header class="header pt-8 sm:pt-16 lg:py-24 lg:h-screen lg:sticky lg:top-0">
-    <div class="header__inner h-full flex flex-col justify-between" data-aos="fade-right" data-aos-once="true" data-aos-mirror="false">
+    <div
+      class="header__inner h-full flex flex-col justify-between"
+      data-aos="fade-right"
+      data-aos-once="true"
+      data-aos-mirror="false"
+    >
       <RouterLink to="#about" class="header__title flex flex-col">
         <h1 class="jersey-10">Wen Yan</h1>
         <span class="text-2xl tracking-widest font-black text-neutral">Front End Engineer</span>
@@ -29,10 +34,9 @@
 </template>
 
 <script setup>
-import { CodePen, GitHub, Website, YouTube } from '@/components/icons';
-import { RouterLink } from 'vue-router';
-import TableOfContents from './TableOfContents.vue';
-
+import { CodePen, GitHub, Website, YouTube } from '@/components/icons'
+import { RouterLink } from 'vue-router'
+import TableOfContents from './TableOfContents.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -41,9 +45,9 @@ import TableOfContents from './TableOfContents.vue';
     a {
       color: var(--color-neutral);
       opacity: 1;
-      transition: opacity .1s ease-in-out;
+      transition: opacity 0.1s ease-in-out;
 
-      >svg {
+      > svg {
         width: 1.75rem;
         height: 1.75rem;
       }
@@ -52,7 +56,7 @@ import TableOfContents from './TableOfContents.vue';
     @media (hover: hover) {
       @supports selector(:has(*)) {
         &:has(a:hover) a:not(:hover) {
-          opacity: .6;
+          opacity: 0.6;
         }
       }
     }
