@@ -11,7 +11,7 @@
     </section>
     <section class="background">
       <p>
-        我的個人舊版作品集，是學習 Vue 初期時的練習，使用 Nuxt 3 + Tailwind
+        我的個人舊版作品集，是學習 Vue 初期時的練習，使用 Vue 3 + Tailwind
         CSS，並詳細記錄了每一個作品的可公開內容。目前該舊版作品集仍提供本網站《Wen
         Yan》部分作品的詳細內容連結。
       </p>
@@ -31,7 +31,7 @@
 </template>
 
 <script setup>
-import { GitHub, Website } from '@/components/icons'
+import { GitHub, Website } from '@/components/icons';
 const toolSet = [
   {
     title: '設計軟體',

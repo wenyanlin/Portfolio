@@ -40,8 +40,8 @@
       </div>
     </section>
     <section>
-      <h2 class="title">圖像轉換介面圖</h2>
-      <img src="/projects/Bearune Tools 如何使用.webp" alt="圖像轉換介面圖" />
+      <h2 class="title">圖像轉換界面圖</h2>
+      <img src="/projects/Bearune Tools 如何使用.webp" alt="圖像轉換界面圖" />
     </section>
   </div>
 </template>
