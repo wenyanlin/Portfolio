@@ -38,9 +38,15 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           ssh-keyscan -H 172.233.65.93 >> ~/.ssh/known_hosts
+
       # Step 7: Transfer files using rsync
       - name: Transfer files
         run: |
           rsync -avz --delete ./dist/ root@172.233.65.93:/var/www/portfolio/
         env:
           SSH_AUTH_SOCK: ${{ env.SSH_AUTH_SOCK }}  # 確保 SSH 代理可用
+
+      # Step 8: Set permissions
+      - name: Set permissions
+        run: |
+          ssh root@172.233.65.93 'chown -R www-data:www-data /var/www/portfolio'
