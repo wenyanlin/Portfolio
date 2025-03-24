@@ -16,5 +16,4 @@ AOS.init({
   duration: 800,
   easing: 'ease-in-out-sine',
   anchorPlacement: 'top-bottom',
-  mirror: true,
 })
