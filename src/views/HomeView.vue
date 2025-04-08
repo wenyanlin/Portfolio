@@ -11,13 +11,7 @@
           我目前是一名專注於前端開發的工程師，擅長將設計理念轉化為流暢的使用者體驗。在開發過程中，我特別注重介面的直觀性與可訪問性，讓每位使用者都能輕鬆找到產品。將靜態設計轉化為生動的網頁介面是我最著迷的過程，這種創造的過程常常讓我進入忘我的心流狀態。
         </p>
         <p>
-          曾經作為家裡蹲創意印刷的前端工程師，我獨立完成了從需求分析到技術選型，再到開發部署的完整流程，成功翻新了品牌的官方網站。
-        </p>
-        <p>
-          2024年底，我開始了一段深度的自我提升之旅。除了持續精進技術能力，我也嘗試了很多活動，例如：將
-          AI API 接入 LINE
-          Bot、烘焙各種覺得自己能做到的糕點、想畫什麼就畫什麼，以及運用可理解性輸入法提升英文能力。（順帶一提，我還有一隻會陪我讀
-          JavaScript 的橘貓，雖然牠可能對閉包和原型鏈沒什麼興趣）。
+          現為獨立接案者，專注於提供客製化的網站開發、維護與優化服務。具備從零開始建構現代化、響應式網站的能力，熟悉 Vue.js 生態系，並能與後端 API 進行有效整合。致力於透過穩定可靠的技術，協助客戶達成線上目標。
         </p>
       </div>
     </section>
@@ -53,20 +47,18 @@
         <h2 class="text-2xl font-semibold tracking-widest">最後，</h2>
         <div
           class="about__inner text-lg text-neutral tracking-wider leading-loose break-words space-y-4 mt-16 relative">
-          <p data-aos="fade-up">
+          <!-- <p data-aos="fade-up">
             不只前端開發，過去我熱衷於探索不同領域，並試圖從中找到我願意終其一生為之付出的領域。很長一段時間，我嘗試了寫小說、平面設計、動態設計、動畫製作、遊戲製作、社群經營等舉不勝舉。我也寫了超過五種程式語言，其中不乏遇過一踏入就想離開的領域（就是你組合語言！），這些經歷卻更加開闊了我的視野，最終也意外找到了前端開發這條學無止境的道路。
           </p>
           <p data-aos="fade-up">
             我想我已經找到了我的熱愛，並將在這個領域中不斷茁壯。特別是在用戶體驗設計和互動性開發方面，我找到了極大的成就感。我期待著未來的挑戰，並相信自己能夠跨越一座又一座的高山，為這個領域做出實質貢獻。
-          </p>
-          <p data-aos="fade-up">當然，學海浩瀚，探索將永無止境。</p>
-          <a href="/林文姸的履歷.pdf" target="_blank" data-aos="fade-up"><img src="/avatar.gif" alt="avatar"
+          </p> -->
+          <p data-aos="fade-up">學海浩瀚，探索將永無止境。</p>
+          <p data-aos="fade-up">如果你有任何想法、工作邀約，或只是想與我交朋友，歡迎聯繫！</p>
+          <p data-aos="fade-up"><a href="mailto:clps10070623@gmail.com">clps10070623@gmail.com</a></p>
+          <a href="/林文姸_20250408_前端工程師履歷.pdf" target="_blank" data-aos="fade-up"><img src="/avatar.gif" alt="avatar"
               class="w-32 float-right avatar" /></a>
         </div>
-      </div>
-      <div class="text-lg text-neutral tracking-wider leading-loose break-words mt-48 lg:mt-0">
-        <p data-aos="fade-up">如果你有任何想法，或只是想跟我聊天，歡迎聯繫我！</p>
-        <p data-aos="fade-up"><a href="mailto:clps10070623@gmail.com">clps10070623@gmail.com</a></p>
       </div>
     </section>
   </main>
@@ -79,14 +71,18 @@ import ProjectDetails from '@/components/ProjectDetails.vue'
 import Project from '@/components/ProjectsSection.vue'
 import { inject, nextTick, onMounted, ref } from 'vue'
 
+/**
+ * Experience Data
+ */
 const experienceData = [
   {
     period: 'NOV 2024 ─ PRESENT',
-    position: '前端工程師',
-    company: '家裡蹲創意印刷股份有限公司',
-    responsibilities:
-      '長期合作維護品牌官網，主要負責：更新資訊、修復 BUG 及維護組件，定期優化網站 SEO 並分析流量數據。',
-    tags: ['Vue.js', 'JavaScript', 'HTML&SCSS', 'SEO', 'Google Analytics'],
+    position: '前端獨立接案',
+    company: '自由工作者',
+    responsibilities: [
+      '專注於提供客製化的網站開發、維護與優化服務。', '（進行中）負責企業之形象網站建置專案', '（進行中）長期維護與優化品牌官方網站'
+    ],
+    tags: ['Vue.js', 'Pinia', 'Vite', 'JavaScript', 'HTML&SCSS', 'TailwindCSS', 'Figma', 'Adobe Illustrator', 'SEO', 'Google Analytics'],
   },
   {
     period: 'MAY 2023 ─ NOV 2024',
@@ -94,7 +90,7 @@ const experienceData = [
     company: '家裡蹲創意印刷股份有限公司',
     responsibilities:
       '主導官方網站全週期開發，從需求分析、UI/UX 設計到前端實作與 API 串接。獨立完成網站視覺資源製作，並建構可維護架構。同時協助管理子公司電商平台及社群媒體運營。',
-    tags: ['Vue.js', 'JavaScript', 'HTML&SCSS', 'TailwindCSS', 'Figma', 'Adobe Illustrator'],
+    tags: ['Vue.js', 'Vite', 'JavaScript', 'HTML&SCSS', 'TailwindCSS', 'Figma', 'Adobe Illustrator'],
   },
   {
     period: 'AUG ─ NOV 2018',
@@ -129,7 +125,7 @@ const projectData = [
     title: '家裡蹲創意印刷 HOMEMAKING',
     image: '/projects/HomeMaking.webp',
     description: '獨立開發的企業官方網站，重新定位企業形象。',
-    tags: ['網站', 'Vue.js', 'Vue-Router', 'Tailwind CSS'],
+    tags: ['網站', 'Vue.js', 'Vue-Router', 'Vite', 'Tailwind CSS'],
   },
   {
     id: 'BearuneBlog',
@@ -145,7 +141,7 @@ const projectData = [
     link: 'https://bearune.com/',
     image: '/projects/Bearune Tools.webp',
     description: '一個嘗試使用不同前端庫的合集網站：圖片轉檔、QR code、表情符號合集。',
-    tags: ['網站', 'Vue.js', 'Tailwind CSS'],
+    tags: ['網站', 'Vue.js', 'Vite', 'Tailwind CSS'],
   },
   {
     id: 'HomeMakingPractice',

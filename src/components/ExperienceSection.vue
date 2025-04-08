@@ -11,8 +11,8 @@
           <span class="font-semibold">{{ position }}</span
           ><span>．</span><span>{{ company }}</span>
         </div>
-        <div class="experience-section__responsibilities break-words mt-2">
-          <ul v-if="Array.isArray(responsibilities)" class="list-disc pl-6 space-y-2">
+        <div class="experience-section__responsibilities break-words mt-2 pb-1">
+          <ul v-if="Array.isArray(responsibilities)" class="list-disc pl-6">
             <li v-for="item in responsibilities" :key="item">
               {{ item }}
             </li>
