@@ -6,9 +6,9 @@
       data-aos-once="true"
       data-aos-mirror="false"
     >
-      <RouterLink to="#about" class="header__title flex flex-col">
-        <h1 class="jersey-10">Wen Yan</h1>
-        <span class="text-2xl tracking-widest font-black text-neutral">Front End Engineer</span>
+      <RouterLink to="#about" class="header__title w-fit flex flex-col items-center">
+        <h1 class="cotta tracking-widest italic">Wenyan</h1>
+        <span class="coffekan text-4xl font-semibold text-neutral">front end engineer</span>
         <!-- <span class="text-2xl tracking-widest font-black text-neutral-content">.-- . -. -.-- .- -.</span> -->
       </RouterLink>
       <div class="header__toc hidden lg:block">
@@ -22,9 +22,9 @@
           <CodePen />
         </a>
         <!-- <a href="/"><Linkedin/></a> -->
-        <a href="https://bearune.com/" target="_blank">
+        <!-- <a href="https://bearune.com/" target="_blank">
           <Website />
-        </a>
+        </a> -->
         <a href="https://www.youtube.com/c/SimsEvelyn" target="_blank">
           <YouTube />
         </a>
@@ -34,7 +34,7 @@
 </template>
 
 <script setup>
-import { CodePen, GitHub, Website, YouTube } from '@/components/icons'
+import { CodePen, GitHub, YouTube } from '@/components/icons'
 import { RouterLink } from 'vue-router'
 import TableOfContents from './TableOfContents.vue'
 </script>

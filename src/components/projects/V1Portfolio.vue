@@ -1,7 +1,7 @@
 <template>
   <div class="home-making article">
     <section class="link flex gap-2">
-      <a href="https://wenyanlin.github.io/" target="_blank" class="link__main"
+      <a href="https://v1portfolio.bearune.com/" target="_blank" class="link__main"
         ><span class="mb-0.25">造訪網站</span>
         <Website />
       </a>
@@ -31,7 +31,7 @@
 </template>
 
 <script setup>
-import { GitHub, Website } from '@/components/icons';
+import { GitHub, Website } from '@/components/icons'
 const toolSet = [
   {
     title: '設計軟體',

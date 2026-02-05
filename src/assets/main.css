@@ -1,7 +1,8 @@
 @import './base.css';
+@import './fonts.css';
 
 h1 {
-  @apply text-8xl text-neutral;
+  @apply text-6xl text-neutral font-bold;
 }
 
 .badge {

@@ -1,20 +1,19 @@
 <template>
-  <div class="home-making article">
-    <section class="link flex">
-      <a href="https://www.draw123.com.tw/" target="_blank" class="link__main"
-        ><span class="mb-0.25">造訪網站</span>
-        <Website />
-      </a>
+  <div class="uprintshop article">
+    <section class="link flex gap-2">
+      <a
+        href="https://www.uprintshop.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link__main"
+        ><span class="mb-0.25">造訪網站</span> <Website
+      /></a>
     </section>
     <section class="background">
       <p>
-        這是一個基於 Vue 3
-        開發的功能型平台網站。與一般形象網站不同，本專案含有大量文章與產品內容，為了讓維護者能輕鬆更新資訊，導入
-        Marked 與 Gray-matter 解析 Markdown 檔案，將純文字轉換為排版精美的 HTML
-        頁面。這是我目前開發過資訊及版型最複雜的作品，除了引入後端 API
-        來製作會員限定的查價系統，我利用 Pinia 管理全域狀態，並封裝 Axios
-        請求模組，讓資料流清晰可控。此專案雖為個人獨立開發，專案仍導入 Airbnb Base ESLint Config
-        確保每一行程式碼都符合業界最佳實踐，以利後續維護。
+        此專案主要為打開國際市場而重新翻修，因此我將網站定調為「專業、沉穩且具現代感」。為了打破傳統印刷業較為生硬的刻板印象，我引入了
+        Lenis Smooth Scroll 實現流暢捲動體驗，並搭配 WOW.js
+        製作優雅的進場動畫，讓使用者在瀏覽過程中感受到品牌的質感。此專案為個人獨立製作，從中學到與客戶溝通、配置前端效能到最終產出完整網站的全過程。
       </p>
     </section>
     <section>
@@ -53,11 +52,11 @@ import { ArrowRight, Website } from '@/components/icons'
 const toolSet = [
   {
     title: '設計軟體',
-    list: ['Xmind', 'Adobe Illustrator', 'Adobe Photoshop', 'Figma'],
+    list: ['Xmind', 'Adobe Illustrator', 'Figma'],
   },
   {
     title: '開發語言',
-    list: ['HTML', 'SCSS', 'JavaScript', 'Vue 3', 'Vue-Router', 'TailwindCSS'],
+    list: ['HTML', 'SCSS', 'JavaScript', 'Vue 3', 'Vue-Router', 'TailwindCSS', 'Vue I18n'],
   },
 ]
 </script>

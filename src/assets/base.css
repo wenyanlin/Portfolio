@@ -38,7 +38,7 @@
 }
 
 :root {
-  --primary: 79.38% 0.15 78.61;
+  --primary: 83.42% 0.1681 145.42;
   --primary-content: 16.7% 0.01 51.32;
   --secondary: 78.93% 0.02 79.05;
   --secondary-content: 25.24% 0.04 75.28;
@@ -70,7 +70,7 @@
 }
 
 :root[data-theme='dark'] {
-  --primary: 85.59% 0.14 80.58;
+  --primary: 83.42% 0.1681 145.42;
   --primary-content: 14.9% 0.03 308.87;
   --secondary: 91.83% 0.07 78.7;
   --secondary-content: 14.57% 0.03 32.44;
@@ -94,8 +94,8 @@
 @supports not (color: oklch(0% 0 0)) {
   :root {
     color-scheme: light;
-    --fallback-p: #eeaf3a;
-    --fallback-pc: #140d09;
+    --fallback-p: #7ae582;
+    --fallback-pc: #0b1409;
     --fallback-s: #c2b9ab;
     --fallback-sc: #2e1f08;
     --fallback-n: #40372b;
@@ -118,7 +118,7 @@
   @media (prefers-color-scheme: dark) {
     :root {
       color-scheme: dark;
-      --fallback-p: #ffc558;
+      --fallback-p: #7ae582;
       --fallback-pc: #0e0813;
       --fallback-s: #ffdfad;
       --fallback-sc: #160503;
@@ -148,10 +148,6 @@
   user-select: none;
   font-family: 'Noto Sans TC', sans-serif;
   /* cursor: none !important; */
-}
-
-.jersey-10 {
-  font-family: 'Jersey 10', 'Noto Sans TC', sans-serif;
 }
 
 /* 基本捲軸樣式 */

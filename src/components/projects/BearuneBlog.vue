@@ -1,11 +1,11 @@
 <template>
   <div class="home-making article">
     <section class="link flex gap-2">
-      <a href="https://bearune.com/" target="_blank" class="link__main"
+      <a href="https://blog.bearune.com/" target="_blank" class="link__main"
         ><span class="mb-0.25">造訪網站</span>
         <Website />
       </a>
-      <a href="https://github.com/Bearune/Bearune" target="_blank"
+      <a href="https://github.com/wenyanlin/Bearune" target="_blank"
         ><span class="mt-0.25"><GitHub /></span>
       </a>
     </section>

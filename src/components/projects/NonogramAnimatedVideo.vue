@@ -12,9 +12,9 @@
     <section class="background">
       <img src="/projects/Nonogram.gif" alt="Nonogram文字特效" class="mb-2" />
       <p>
-        《Nonogram》動畫由我帶領團隊製作而成。從歷史到規則，實作到結論，希望用簡單的語言將 Nonogram
-        分享給更多的人。耗時一週，主要使用 After Effects 製作動畫，並以 Premiere 剪輯，其中特別使用
-        Cartoon Animator 來製作角色面部動畫。
+        擔任專案統籌，主導從腳本分鏡到最終成品的完整製作週期。除負責 95%
+        的關鍵動態設計外，統一團隊的製作標準，協助組員完成資料蒐集與音效錄製，並將 Nonogram
+        化為簡單易懂的教學性視覺動畫。
       </p>
     </section>
     <section>

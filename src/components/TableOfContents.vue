@@ -4,7 +4,9 @@
       <li v-for="link in sections" :key="link.id">
         <RouterLink :to="`#${link.id}`" class="toc-link"
           ><span class="toc-link__indicator"></span
-          ><span class="toc-link_text">{{ link.id.split('-').join(' ') }}</span></RouterLink
+          ><span class="toc-link_text cotta lowercase">{{
+            link.id.split('-').join(' ')
+          }}</span></RouterLink
         >
       </li>
     </ul>
@@ -171,11 +173,12 @@ onUnmounted(() => {
     opacity 0.3s ease-in-out;
   display: flex;
   align-items: center;
+  font-size: 0.8rem;
   opacity: 0.6;
 
   &__indicator {
     width: 0;
-    height: 1px;
+    height: 0.5px;
     display: block;
     background-color: var(--color-primary-content);
     margin-right: 0;
@@ -190,21 +193,22 @@ onUnmounted(() => {
 
   &.absolute-active {
     opacity: 1;
+    font-style: italic;
 
     .toc-link__indicator {
-      width: 1rem;
-      margin-right: 1rem;
+      width: 0.5rem;
+      margin-right: 0.5rem;
     }
   }
 
   &.active {
     font-weight: bold;
-    text-transform: uppercase;
     opacity: 1;
+    font-style: italic;
 
     .toc-link__indicator {
-      width: 4rem;
-      margin-right: 1.5rem;
+      width: 2rem;
+      margin-right: 1rem;
     }
   }
 }

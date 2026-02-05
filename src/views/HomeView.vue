@@ -1,52 +1,88 @@
 <template>
   <Teleport to="body">
-    <ProjectDetails :show="showModal" :position="clickPosition" :project="currentProject" @close="closeModal"
-      v-show="showModal"></ProjectDetails>
+    <ProjectDetails
+      :show="showModal"
+      :position="clickPosition"
+      :project="currentProject"
+      @close="closeModal"
+      v-show="showModal"
+    ></ProjectDetails>
   </Teleport>
   <main class="pt-24 col-span-1 lg:col-span-3">
     <section class="about mb-32" id="about">
-      <div class="about__inner text-lg text-neutral tracking-wider leading-loose break-words space-y-4"
-        data-aos="fade-up">
+      <div
+        class="about__inner text-neutral tracking-wider leading-loose break-words space-y-4"
+        data-aos="fade-up"
+      >
         <p>
-          我目前是一名專注於前端開發的工程師，擅長將設計理念轉化為流暢的使用者體驗。在開發過程中，我特別注重介面的直觀性與可訪問性，讓每位使用者都能輕鬆找到產品。將靜態設計轉化為生動的網頁介面是我最著迷的過程，這種創造的過程常常讓我進入忘我的心流狀態。
-        </p>
-        <p>
-          現為獨立接案者，專注於提供客製化的網站開發、維護與優化服務。具備從零開始建構現代化、響應式網站的能力，熟悉 Vue.js 生態系，並能與後端 API 進行有效整合。致力於透過穩定可靠的技術，協助客戶達成線上目標。
+          我目前是專注前端開發的工程師，擅長將設計理念轉化為流暢的使用者體驗。在開發過程中，特別注重界面直觀性與可訪問性，讓每位使用者都能輕鬆找到產品。將靜態設計轉化為生動的網頁界面是我最著迷的過程，這種創造過程常常讓我進入心流狀態。
         </p>
       </div>
     </section>
     <section class="exp mb-32" id="experience">
-      <h2 class="text-2xl font-semibold tracking-widest">EXPERIENCE</h2>
+      <h2 class="para-title">EXPERIENCE</h2>
       <div class="exp__inner flex flex-col gap-16 mt-16 overflow-x-hidden">
-        <Experience v-for="exp in experienceData" :key="exp.period" :experience="exp" data-aos="fade-left" />
+        <Experience
+          v-for="exp in experienceData"
+          :key="exp.period"
+          :experience="exp"
+          data-aos="fade-left"
+        />
       </div>
     </section>
     <section class="education mb-32" id="education">
-      <h2 class="text-2xl font-semibold tracking-widest">Education</h2>
+      <h2 class="para-title">EDUCATION</h2>
       <div class="exp__inner flex flex-col gap-16 mt-16 overflow-x-hidden">
-        <Experience v-for="edu in educationData" :key="edu.period" :experience="edu" data-aos="fade-left" />
+        <Experience
+          v-for="edu in educationData"
+          :key="edu.period"
+          :experience="edu"
+          data-aos="fade-left"
+        />
       </div>
     </section>
     <section class="projects mb-32" id="projects">
-      <h2 class="text-2xl font-semibold tracking-widest">PROJECTS</h2>
+      <h2 class="para-title">PROJECTS</h2>
       <div class="projects__inner grid sm:grid-cols-2 gap-x-8 gap-y-16 mt-16">
-        <Project v-for="project in projectData" :key="project.title" :project="project"
-          @click="openModal($event, project)" />
+        <Project
+          v-for="project in projectData"
+          :key="project.title"
+          :project="project"
+          @click="openModal($event, project)"
+        />
       </div>
     </section>
-    <section class="gallery mb-32" id="gallery">
-      <h2 class="text-2xl font-semibold tracking-widest">GALLERY</h2>
+    <!-- <section class="code-lab mb-32" id="code-lab">
+      <h2 class="para-title">CODE LAB</h2>
+      <div
+        class="code-lab__inner mt-16 flex flex-wrap gap-x-2 gap-y-4 sm:gap-x-8 sm:gap-y-16 justify-center align-stretch"
+      >
+        <CodeLabSection />
+      </div>
+    </section> -->
+    <section class="gallery mb-32" id="design-gallery">
+      <h2 class="para-title">DESIGN GALLERY</h2>
       <!-- <div class="gallery__inner grid sm:grid-cols-2 gap-8 mt-16"> -->
       <div
-        class="gallery__inner mt-16 flex flex-wrap gap-x-2 gap-y-4 sm:gap-x-8 sm:gap-y-16 justify-center align-stretch">
-        <Gallery v-for="project in galleryData" :key="project.title" :project="project" :class="project.width" />
+        class="gallery__inner mt-16 flex flex-wrap gap-x-2 gap-y-4 sm:gap-x-8 sm:gap-y-16 justify-center align-stretch"
+      >
+        <Gallery
+          v-for="project in galleryData"
+          :key="project.title"
+          :project="project"
+          :class="project.width"
+        />
       </div>
     </section>
-    <section class="about mb-24 lg:h-[calc(100vh-14rem)] flex flex-col justify-between" id="in-closing,">
+    <section
+      class="about mb-24 lg:h-[calc(100vh-14rem)] flex flex-col justify-between"
+      id="in-closing,"
+    >
       <div>
-        <h2 class="text-2xl font-semibold tracking-widest">最後，</h2>
+        <h2 class="para-title">最後，</h2>
         <div
-          class="about__inner text-lg text-neutral tracking-wider leading-loose break-words space-y-4 mt-16 relative">
+          class="about__inner text-lg text-neutral tracking-wider leading-loose break-words space-y-4 mt-16 relative"
+        >
           <!-- <p data-aos="fade-up">
             不只前端開發，過去我熱衷於探索不同領域，並試圖從中找到我願意終其一生為之付出的領域。很長一段時間，我嘗試了寫小說、平面設計、動態設計、動畫製作、遊戲製作、社群經營等舉不勝舉。我也寫了超過五種程式語言，其中不乏遇過一踏入就想離開的領域（就是你組合語言！），這些經歷卻更加開闊了我的視野，最終也意外找到了前端開發這條學無止境的道路。
           </p>
@@ -55,9 +91,12 @@
           </p> -->
           <p data-aos="fade-up">學海浩瀚，探索將永無止境。</p>
           <p data-aos="fade-up">如果你有任何想法、工作邀約，或只是想與我交朋友，歡迎聯繫！</p>
-          <p data-aos="fade-up"><a href="mailto:clps10070623@gmail.com">clps10070623@gmail.com</a></p>
-          <a href="/林文姸_20250408_前端工程師履歷.pdf" target="_blank" data-aos="fade-up"><img src="/avatar.gif" alt="avatar"
-              class="w-32 float-right avatar" /></a>
+          <p data-aos="fade-up">
+            <a href="mailto:clps10070623@gmail.com">clps10070623@gmail.com</a>
+          </p>
+          <a href="/林文姸_20250408_前端工程師履歷.pdf" target="_blank" data-aos="fade-up"
+            ><img src="/avatar.gif" alt="avatar" class="w-32 float-right avatar"
+          /></a>
         </div>
       </div>
     </section>
@@ -80,9 +119,22 @@ const experienceData = [
     position: '前端獨立接案',
     company: '自由工作者',
     responsibilities: [
-      '專注於提供客製化的網站開發、維護與優化服務。', '（進行中）負責企業之形象網站建置專案', '（進行中）長期維護與優化品牌官方網站'
+      '專注於提供客製化的網站開發、維護與優化服務。',
+      '負責企業之形象網站建置專案',
+      '長期維護與優化品牌官方網站',
     ],
-    tags: ['Vue.js', 'Pinia', 'Vite', 'JavaScript', 'HTML&SCSS', 'TailwindCSS', 'Figma', 'Adobe Illustrator', 'SEO', 'Google Analytics'],
+    tags: [
+      'Vue.js',
+      'Pinia',
+      'Vite',
+      'JavaScript',
+      'HTML&SCSS',
+      'TailwindCSS',
+      'Figma',
+      'Adobe Illustrator',
+      'SEO',
+      'Google Analytics',
+    ],
   },
   {
     period: 'MAY 2023 ─ NOV 2024',
@@ -90,7 +142,15 @@ const experienceData = [
     company: '家裡蹲創意印刷股份有限公司',
     responsibilities:
       '主導官方網站全週期開發，從需求分析、UI/UX 設計到前端實作與 API 串接。獨立完成網站視覺資源製作，並建構可維護架構。同時協助管理子公司電商平台及社群媒體運營。',
-    tags: ['Vue.js', 'Vite', 'JavaScript', 'HTML&SCSS', 'TailwindCSS', 'Figma', 'Adobe Illustrator'],
+    tags: [
+      'Vue.js',
+      'Vite',
+      'JavaScript',
+      'HTML&SCSS',
+      'TailwindCSS',
+      'Figma',
+      'Adobe Illustrator',
+    ],
   },
   {
     period: 'AUG ─ NOV 2018',
@@ -121,75 +181,84 @@ const educationData = [
 
 const projectData = [
   {
+    id: 'UPrintShop',
+    category: '網站',
+    title: '環球印館控股 官方網站',
+    image: '/projects/UPrintShop.webp',
+    description: '獨立開發的企業官方網站，重新定位企業形象。',
+    tags: ['Vue.js', 'Vue-Router', 'Vite', 'Tailwind CSS'],
+  },
+  {
     id: 'HomeMaking',
-    title: '家裡蹲創意印刷 HOMEMAKING',
+    category: '網站',
+    title: '家裡蹲創意印刷 官方網站',
     image: '/projects/HomeMaking.webp',
     description: '獨立開發的企業官方網站，重新定位企業形象。',
-    tags: ['網站', 'Vue.js', 'Vue-Router', 'Vite', 'Tailwind CSS'],
+    tags: ['Vue.js', 'Vue-Router', 'Vite', 'Tailwind CSS'],
   },
   {
     id: 'BearuneBlog',
-    title: 'Bearune Blog',
+    category: '網站',
+    title: 'Bearune 部落格網站',
     link: 'https://bearune.com/',
     image: '/projects/Bearune.webp',
     description: '自架部落格，主要分享學習筆記。',
-    tags: ['網站', 'Nuxt.js', 'Vue.js', 'Pinia', 'Tailwind CSS', 'Element Plus'],
+    tags: ['Nuxt.js', 'Vue.js', 'Pinia', 'Tailwind CSS', 'Element Plus'],
   },
   {
     id: 'BearuneTool',
-    title: 'Bearune Tool',
+    category: '網站',
+    title: 'Bearune 工具網站',
     link: 'https://bearune.com/',
     image: '/projects/Bearune Tools.webp',
     description: '一個嘗試使用不同前端庫的合集網站：圖片轉檔、QR code、表情符號合集。',
-    tags: ['網站', 'Vue.js', 'Vite', 'Tailwind CSS'],
+    tags: ['Vue.js', 'Vite', 'Tailwind CSS'],
   },
-  {
-    id: 'HomeMakingPractice',
-    title: '家裡蹲創意印刷網站練習',
-    link: 'https://github.com/wenyanlin/Practice-Project-Home-Making.git',
-    image: '/projects/HomeMakingPractice.webp',
-    description:
-      '以家裡蹲創意印刷為主題，分別設計並切出不同的排版方式與組件，是一次純 HTML、SCSS 與 jQuery 的前端開發練習。',
-    tags: ['網站', 'jQuery'],
-  },
+  // {
+  //   id: 'HomeMakingPractice',
+  //   category: '網站',
+  //   title: '切版練習',
+  //   link: 'https://github.com/wenyanlin/Practice-Project-Home-Making.git',
+  //   image: '/projects/HomeMakingPractice.webp',
+  //   description:
+  //     '以家裡蹲創意印刷為主題，分別設計並切出不同的排版方式與組件，是一次純 HTML、SCSS 與 jQuery 的前端開發練習。',
+  //   tags: ['jQuery'],
+  // },
   {
     id: 'NonogramResearch',
+    category: '研究',
     title: '​非主流NONOGRAM解題方法研究',
     link: 'https://bearune.com/',
     image: '/projects/nonogram.webp',
     description: '與團隊合作研究 Nonogram 解題演算法，使用 C++ 實作解題引擎。',
-    tags: ['研究', 'C++', 'Adobe Illustrator', 'Premiere'],
+    tags: ['C++', 'Adobe Illustrator', 'Premiere'],
   },
   {
     id: 'SimsEvelyn',
+    category: '經營',
     title: 'SimsEvelyn YouTube 頻道',
     link: 'https://www.youtube.com/@SimsEvelyn',
     image: '/projects/YouTube.webp',
     description: '獨立經營遊戲頻道，專攻《The Sims 4》虛擬建築設計。BiliBili 同名。',
-    tags: ['動畫', '定格動畫', 'Adobe Illustrator', 'Premiere'],
+    tags: ['定格動畫', 'Adobe Illustrator', 'Premiere'],
   },
   {
     id: 'NonogramAnimatedVideo',
-    title: '​NONOGRAM：動畫短片',
+    category: '動畫',
+    title: '​NONOGRAM 動畫短片',
     link: 'https://wenyanlin.github.io/project/NONOGRAMAnimatedIntroductionVideo',
     image: '/projects/Nonogram.jpg',
     description: 'Nonogram 是一種益智遊戲，我們團隊製作了動畫短片，希望能將它推廣給更多人。',
-    tags: [
-      '動畫',
-      'Motion Design',
-      'Adobe Illustrator',
-      'Premiere',
-      'After Effects',
-      'Cartoon Animator',
-    ],
+    tags: ['Motion Design', 'Adobe Illustrator', 'Premiere', 'After Effects', 'Cartoon Animator'],
   },
   {
     id: 'V1Portfolio',
-    title: 'WEN YAN LIN：個人作品集',
+    category: '網站',
+    title: '初代作品集網站',
     link: 'https://wenyanlin.github.io/',
     image: '/projects/old portfolio.webp',
     description: '我的個人舊版作品集，是早期的 Vue 作品。',
-    tags: ['網站', 'Vue.js', 'Tailwind CSS'],
+    tags: ['Vue.js', 'Tailwind CSS'],
   },
 ]
 
@@ -267,6 +336,15 @@ onMounted(() => {
 <style lang="scss" scoped>
 section {
   scroll-margin-top: 8rem;
+
+  .para-title {
+    font-family: 'Cotta', 'Noto Sans TC', sans-serif;
+    text-transform: uppercase;
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.1rem;
+  }
 
   &.projects {
     .projects-section {

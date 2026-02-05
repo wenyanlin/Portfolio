@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Cotta';
+  src: url('@/assets/fonts/Cotta Free.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'coffekan';
+  src: url('@/assets/fonts/CoffekanRegular.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Creme Espana';
+  src: url('@/assets/fonts/Creme Espana.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+.coffekan {
+  font-family: 'coffekan', 'Noto Sans TC', sans-serif;
+}
+
+.jersey-10 {
+  font-family: 'Jersey 10', 'Noto Sans TC', sans-serif;
+}
+
+.cotta {
+  font-family: 'Cotta', 'Noto Sans TC', sans-serif;
+}
+
+.creme-espana {
+  font-family: 'Creme Espana', 'Noto Sans TC', sans-serif;
+}

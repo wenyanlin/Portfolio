@@ -4,7 +4,7 @@
       class="experience-section__inner grid grid-cols-1 sm:grid-cols-8 gap-4 tracking-wider leading-loose text-neutral"
     >
       <div class="experience-section__period sm:col-span-2 my-1.5">
-        <span class="text-xs align-top text-nowrap">{{ period }}</span>
+        <span class="cotta text-sm align-top text-nowrap">{{ period }}</span>
       </div>
       <div class="experience-section__content sm:col-span-6">
         <div class="text-lg">
